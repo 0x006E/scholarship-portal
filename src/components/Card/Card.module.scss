@@ -70,7 +70,8 @@
   padding: 0.8em 1em;
   gap: 7px;
   flex: 1 1 auto;
-  max-height: calc(100% - 220px);
+  max-height: calc(100% - 270px);
+  overflow: hidden;
 
   .description {
     flex: 1 1 auto;
@@ -126,8 +127,7 @@
 }
 .vmBtn {
   margin-top: 5px;
-  width: calc(100% + 0.8em);
   font-size: 0.8rem;
   padding-block: 10px;
-  margin-inline: -0.4em;
+  margin-inline: 0.6em;
 }

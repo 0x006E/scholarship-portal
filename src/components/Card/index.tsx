@@ -51,18 +51,18 @@ function Card(props: CardProps) {
             {loading ? <Skeleton count={5} width="20ch" /> : description}
           </p>
         </div>
-
-        {loading ? null : (
-          <Button
-            className={cx("vmBtn")}
-            rounded="small"
-            onClick={() => navigate(`scholarship/${id}`)}
-          >
-            Learn more&nbsp;
-            <ArrowIcon />
-          </Button>
-        )}
       </div>
+
+      {loading ? null : (
+        <Button
+          className={cx("vmBtn")}
+          rounded="small"
+          onClick={() => navigate(`scholarship/${id}`)}
+        >
+          Learn more&nbsp;
+          <ArrowIcon />
+        </Button>
+      )}
     </div>
   );
 }
