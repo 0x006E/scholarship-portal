@@ -30,7 +30,7 @@
       }
     }
 
-    @media screen and (min-height: 1vw) and (min-width: 850px) {
+    @media screen and (min-height: 1vw) and (min-width: 849px) {
       min-height: 45vh;
     }
     .Logo {
@@ -49,9 +49,9 @@
       display: flex;
       flex: 1 1 724px;
       font-weight: 700;
-      font-size: 5.75vw;
+      font-size: 3.9vw;
       text-align: center;
-      line-height: 1;
+      line-height: 1.2;
       flex-direction: column;
       overflow: hidden;
 
@@ -61,11 +61,11 @@
         max-width: 75%;
         line-height: 1.5;
 
-        @media screen and (min-width: 850px) {
+        @media screen and (min-width: 849px) {
           line-height: unset;
           text-align: left;
         }
-        @media screen and (min-width: 350px) {
+        @media screen and (min-width: 349px) {
           font-size: toRem(33.9);
         }
         @media screen and (max-width: 350px) {
