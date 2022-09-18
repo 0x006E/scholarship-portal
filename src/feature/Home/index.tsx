@@ -23,11 +23,11 @@ import classes from "./Home.module.scss";
 
 const types = [
   { type: "scholarship", text: "Scholarships" },
-  { type: "internship", text: "Internships" },
   { type: "award", text: "Awards" },
-  { type: "grants", text: "Funds & Grants" },
+  { type: "internship", text: "Internships" },
+  // { type: "grants", text: "Funds & Grants" },
   { type: "fellowship", text: "Fellowships" },
-  { type: "contest", text: "Contests" },
+  // { type: "contest", text: "Contests" },
 ];
 
 const categorize = function (scholarships: any) {
@@ -137,10 +137,12 @@ function Home() {
                 key={idx}
               >
                 <div className={classes.categoryItemText}>
-                  <h1>{type.text}</h1>
-                  <p>From IEEE, Gracehopper, Computer society and more</p>
+                  <span>{type.text}</span>
                 </div>
-                <div className={classes.categoryItemImg}></div>
+                <div
+                  data-text={type.type}
+                  className={classes.categoryItemImg}
+                ></div>
               </div>
             ))}
           </div>
