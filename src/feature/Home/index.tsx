@@ -266,7 +266,8 @@ function Home() {
                         )
                       )}
                     </Slider>
-                    {scholarshipsCategories[type].length > visible ? (
+                    {scholarshipsCategories[type].length >
+                    visible.scholarshipCarousel ? (
                       <>
                         <ButtonBack className={classes.btnBack}>
                           <svg
