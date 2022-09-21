@@ -71,6 +71,9 @@
   gap: 7px;
   flex: 1 1 auto;
   max-height: calc(100% - 220px);
+  @media screen and (max-width: 380px) {
+    font-size: 0.75rem;
+  }
 
   .description {
     flex: 1 1 auto;
@@ -94,10 +97,16 @@
       text-overflow: ellipsis;
       word-break: break-all;
       hyphens: auto;
+      @media screen and (max-width: 380px) {
+        $font-size: 0.75rem;
+      }
     }
   }
   .title {
     font-size: 1.25rem;
+    @media screen and (max-width: 380px) {
+      font-size: 1.15rem;
+    }
     font-weight: 700;
     color: #000;
     width: 100%;
@@ -105,6 +114,9 @@
   .org {
     font-weight: 400;
     font-size: 0.883rem;
+    @media screen and (max-width: 380px) {
+      font-size: 0.75rem;
+    }
   }
   .tags {
     display: flex;
@@ -128,6 +140,9 @@
   margin-top: 5px;
   width: calc(100% + 0.8em);
   font-size: 0.8rem;
+  @media screen and (max-width: 380px) {
+    font-size: 0.7rem;
+  }
   padding-block: 10px;
   margin-inline: -0.4em;
 }

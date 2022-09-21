@@ -6,69 +6,50 @@
   max-height: 100vh;
 
   .hero {
-    display: flex;
+    padding: 0px 60px;
+
+    @media screen and (max-width: 850px) {
+      padding: 0px 20px;
+    }
     width: 100%;
     height: 100%;
-    min-height: 100vh;
     align-items: stretch;
     justify-content: center;
     position: relative;
-    @media screen and (max-width: 850px) {
-      &::before {
-        background-image: url(../../assets/hero.webp);
-        opacity: 0.3;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-      }
-    }
 
-    @media screen and (min-height: 1vw) and (min-width: 849px) {
-      min-height: 45vh;
-    }
     .Logo {
-      position: absolute;
-      top: 30px;
-      left: 70px;
+      // position: absolute;
+      margin-top: 41px;
+      width: 162px;
 
-      @media screen and (max-width: 350px) {
+      @media screen and (max-width: 480px) {
         width: 100px;
       }
     }
 
     &Text {
-      margin: auto;
       height: 100%;
       display: flex;
-      flex: 1 1 724px;
       font-weight: 700;
-      font-size: 3.9vw;
-      text-align: center;
-      line-height: 1.2;
+      font-size: 53px;
+      line-height: 1;
+      margin-top: 45px;
       flex-direction: column;
       overflow: hidden;
+      max-width: 506px;
+      letter-spacing: -0.055em;
 
       &Content {
-        margin: auto;
-        width: 12ch;
-        max-width: 75%;
-        line-height: 1.5;
+        line-height: 1;
 
         @media screen and (min-width: 849px) {
           line-height: unset;
           text-align: left;
         }
-        @media screen and (min-width: 349px) {
+        @media screen and (min-width: 480px) {
           font-size: toRem(33.9);
         }
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 481px) {
           font-size: 10vw;
         }
 
@@ -86,32 +67,86 @@
         }
       }
       &Title {
-        margin: auto;
-        color: var.$clr-primary-900;
+        color: #111642;
       }
     }
-    &Img {
-      @media screen and (max-width: 850px) {
-        display: none;
-      }
-      display: block;
-      height: 100vh;
-      width: 50vw;
-      overflow: hidden;
+  }
 
-      & > img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        user-drag: none;
-        -webkit-user-drag: none;
-        user-select: none;
+  .slides {
+    padding: 60px 60px;
+    padding-bottom: 15px;
+    position: relative;
+    @media screen and (max-width: 850px) {
+      padding: 30px 20px;
+      padding-bottom: 0px;
+    }
+
+    .btnBack {
+      left: 10px;
+      @media screen and (max-width: 850px) {
+        left: -5px;
+      }
+    }
+    .btnNext {
+      right: 10px;
+      @media screen and (max-width: 850px) {
+        right: -5px;
+      }
+    }
+    .btnBack,
+    .btnNext {
+      border: none;
+      background: none;
+      top: 45%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var.$clr-primary-900;
+    }
+
+    .btnBack:disabled,
+    .btnNext:disabled {
+      color: #c1c1c1;
+    }
+
+    .dots {
+      margin-inline: auto;
+      margin-top: 12px;
+      width: fit-content;
+      button {
+        border: none;
+        padding: 0;
+        height: 14px;
+        width: 14px;
+        border-radius: 100%;
+        background: #d9d9d9;
+        transition: 0.35s all ease-in-out;
+        & + button {
+          margin-left: 10px;
+        }
+        &:disabled {
+          background: var.$clr-primary-900;
+        }
+
+        @media screen and (max-width: 550px) {
+          height: 7px;
+          width: 7px;
+          & + button {
+            margin-left: 5px;
+          }
+        }
       }
     }
   }
 
   main {
     padding: 0px 60px;
+    @media screen and (max-width: 850px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
 
     @media screen and (max-width: 850px) {
       padding: 0px 20px;
@@ -123,7 +158,6 @@
 
     .orgs {
       position: relative;
-
       .btnBack {
         left: 0;
       }
@@ -145,11 +179,11 @@
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         padding: 10px;
         --webkit-tap-highlight-color: transparent;
-        transition: all 0.75s ease-in-out;
-        transform: translateY(0);
+        transition: all 0.25s ease-in-out;
+        transform: scale(1);
         opacity: 1;
         &:disabled {
-          transform: translateY(1000px);
+          transform: scale(0);
           opacity: 0;
           box-shadow: 0;
         }
@@ -302,6 +336,10 @@
           background-position-x: 100%;
           background-position-y: bottom;
           background-size: contain;
+        }
+        &Img[data-text="fellowship"] {
+          max-height: 100%;
+          background-size: cover;
         }
       }
     }
