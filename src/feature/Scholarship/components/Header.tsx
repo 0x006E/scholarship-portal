@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/main-logo-Banner.webp";
+import Logo from "../../../assets/main-logo.svg";
 import classes from "./Header.module.scss";
 function Header() {
   return (
