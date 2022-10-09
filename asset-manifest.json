@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.4470e2be.css",
-    "main.js": "/static/js/main.3c86ca43.js",
-    "static/media/hero.png": "/static/media/hero.05bb48b75a3c706fb065.png",
-    "static/media/main-logo-Banner.png": "/static/media/main-logo-Banner.33eaab43c1d566fc4dba.png",
-    "static/media/error.png": "/static/media/error.1e1fd268bd6ba69bed4f.png",
+    "main.css": "/static/css/main.1cf16c2b.css",
+    "main.js": "/static/js/main.77f5cd0b.js",
+    "static/media/main-logo.svg": "/static/media/main-logo.0390611cbf5e5bd5ddbe4a53de07df08.svg",
+    "static/media/scholarships.png": "/static/media/scholarships.2675eb752c8617977414.png",
+    "static/media/internship.png": "/static/media/internship.8f2ff1bafe1cada96f6a.png",
+    "static/media/awards.png": "/static/media/awards.54049f8ed9836d3fa4cc.png",
+    "static/media/fellowship.png": "/static/media/fellowship.f001243c3b46d9a93233.png",
+    "static/media/error.webp": "/static/media/error.ddf1cedc8511106af262.webp",
     "static/media/share.svg": "/static/media/share.848843e24d1e10c4a861aa17f9534446.svg",
     "static/media/globe.svg": "/static/media/globe.e128586565348fc600103b09cf5fa0be.svg",
     "index.html": "/index.html",
     "static/media/arrow.svg": "/static/media/arrow.c379d4ce38f51372544fa5198b93d888.svg",
-    "main.4470e2be.css.map": "/static/css/main.4470e2be.css.map",
-    "main.3c86ca43.js.map": "/static/js/main.3c86ca43.js.map"
+    "main.1cf16c2b.css.map": "/static/css/main.1cf16c2b.css.map",
+    "main.77f5cd0b.js.map": "/static/js/main.77f5cd0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.4470e2be.css",
-    "static/js/main.3c86ca43.js"
+    "static/css/main.1cf16c2b.css",
+    "static/js/main.77f5cd0b.js"
   ]
 }
