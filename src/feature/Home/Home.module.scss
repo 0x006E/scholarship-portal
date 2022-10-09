@@ -203,7 +203,7 @@
         @media screen and (max-width: 752px) {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          place-items: flex-end;
+          place-items: center;
           flex-wrap: wrap;
           justify-content: flex-start;
         }
