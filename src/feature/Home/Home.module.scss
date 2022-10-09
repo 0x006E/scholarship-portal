@@ -200,6 +200,14 @@
         gap: 1em;
         padding: 1.5em 0em;
 
+        @media screen and (max-width: 752px) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: flex-end;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+
         @media screen and (max-width: 850px) {
           gap: 1.5vw;
         }
