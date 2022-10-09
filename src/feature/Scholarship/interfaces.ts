@@ -6,6 +6,16 @@ export interface Image {
     };
   };
 }
+
+export interface Banner {
+  data: {
+    id: string;
+    attributes: {
+      url: string;
+    };
+  };
+}
+
 export interface Section {
   id: string;
   Title: string;
@@ -47,6 +57,7 @@ export interface ScholarshipDetails {
         FAQs: FAQ[];
         Timeline: Timeline[];
         Organization: Organization;
+        Banner: Banner;
       };
     };
   };

@@ -207,12 +207,12 @@
         .org {
           width: 20vw;
           height: 10vw;
-          max-width: 256px;
-          max-height: 142px;
+          max-width: 230px;
+          max-height: 112px;
           flex-shrink: 0;
           border: 1px solid rgba(147, 147, 147, 0.41);
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          border-radius: 2vw;
+          border-radius: 1vw;
           display: grid;
           place-items: center;
           background-color: white;
@@ -315,7 +315,7 @@
           }
         }
 
-        $types: "scholarship", "internship", "award", "fellowship";
+        $types: "scholarship", "contest", "award", "funds";
 
         @each $type in $types {
           &Img[data-text="#{$type}"] {
@@ -337,7 +337,7 @@
           background-position-y: bottom;
           background-size: contain;
         }
-        &Img[data-text="fellowship"] {
+        &Img[data-text="funds"] {
           max-height: 100%;
           background-size: cover;
         }

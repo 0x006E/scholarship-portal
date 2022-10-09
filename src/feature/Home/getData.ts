@@ -29,6 +29,14 @@ export const SCHOLARSHIP_DATA = gql`
           Name
           Description
           Type
+          Banner {
+            data {
+              id
+              attributes {
+                url
+              }
+            }
+          }
           Logo {
             data {
               id

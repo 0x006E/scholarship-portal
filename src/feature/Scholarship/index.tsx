@@ -42,6 +42,9 @@ function Scholarship() {
     const TimelineDetails = ScholarshipDetails?.Timeline;
     const Sections = ScholarshipDetails?.Sections;
     const FAQs = ScholarshipDetails?.FAQs;
+    const Banner = ScholarshipDetails?.Banner.data.attributes.url;
+
+    console.log(Banner);
 
     const aboutOrganization = (
       <AboutOrganization
@@ -61,6 +64,7 @@ function Scholarship() {
                 <img
                   src={
                     "https://source.unsplash.com/random/640x1200/?nature,mountains,blue"
+                    // BASE_URL + ScholarshipDetails?.Banner.data?.attributes.url
                   }
                   alt="cover"
                 />

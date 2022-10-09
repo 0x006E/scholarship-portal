@@ -19,14 +19,13 @@ import SlideHero from "../../components/SlideHero";
 import ErrorPage from "../ErrorPage";
 import { ORGANIZATION_DATA, SCHOLARSHIP_DATA } from "./getData";
 import classes from "./Home.module.scss";
-import IMG1 from "./img1.png";
-import IMG2 from "./img2.png";
+import NoImage from "./NoImage.png";
 const types = [
-  { type: "scholarship", text: "Scholarships" },
+  { type: "scholarship", text: "Scholarships & Fellowships" },
   { type: "award", text: "Awards" },
-  { type: "internship", text: "Internships" },
-  // { type: "grants", text: "Funds & Grants" },
-  { type: "fellowship", text: "Fellowships" },
+  // { type: "internship", text: "Internships" },
+  { type: "contest", text: "Contests" },
+  { type: "funds", text: "Funds & Grants" },
   // { type: "contest", text: "Contests" },
 ];
 
@@ -87,7 +86,7 @@ function Home() {
   if (error || errorOrg) return <ErrorPage />;
 
   //const isNotDesktop = useMediaQuery({ query: "(max-width: 850px)" });
-
+  console.log(scholarshipsCategories);
   const firstSectionRef = createRef<HTMLDivElement>();
   return (
     <SimpleBar ref={simpleBar} className={classes.container}>
@@ -134,7 +133,13 @@ function Home() {
                     <Slide index={item.id} key={item.id}>
                       <SlideHero
                         title={item.attributes.Name}
-                        img={idx % 2 === 0 ? IMG1 : IMG2}
+                        img={`${
+                          item.attributes.Banner.data !== null
+                            ? BASE_URL +
+                              item.attributes.Banner.data?.attributes.url
+                            : NoImage
+                        }`}
+                        // loading={!item.attributes.Banner.data}
                       />
                     </Slide>
                   )

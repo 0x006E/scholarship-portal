@@ -10,6 +10,14 @@ query Scholarships {
         Name
         Description
         Type
+        Banner {
+          data {
+            id
+            attributes {
+              url
+            }
+          }
+        }
         Logo {
           data {
             id
